@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Login page </h1>
+    <form onsubmit="login()">
+        <label for="Username">Username</label>
+        <input type="text" name="Username" id="Username" placeholder="Username"
+        required autofocus>
+        <br/>
+        <label for="Password">Password</label>
+        <input type="text" name="Password" id="Password" placeholder="Password"
+        required autofocus>
+        <br/>
+        <button type ="submit" >submit</button>
+        <button type ="reset" >reset</button>
+        <button type ="button" onclick = "hello()">clickme</button>
+    </form>
+        <script>
+            function login(){
+                event.preventDefault();
+                alert("Login button clicked");
+                let Username = document.querySelector('#Username').value;
+                let Password = document.querySelector('#Password').value;
+                alert("Username:"+ Username);
+                alert("Password:"+ Password);
+                if(Username=="admin" && Username.length>3 && Password=="1234" && Password.length>3){
+                    alert("Login Successful");
+                }
+                else{
+                    alert("Inavlid Login credentials");
+                }
+            }
+            function hello(){
+                alert("hello");
+            }
+        </script>
+    
+    
+</body>
+</html>
